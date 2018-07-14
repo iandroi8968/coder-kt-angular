@@ -1,0 +1,15 @@
+tr:first-child th{
+    background-color: lightgoldenrodyellow;
+}
+tr:nth-child(even) {
+    background-color: lightslategray;
+}
+tr:nth-child(odd) {
+    background-color: lightsteelblue;
+}
+tr:nth-child(even):hover {
+    background-color: aliceblue;
+}
+tr:nth-child(odd):hover {
+    background-color: aliceblue;
+}

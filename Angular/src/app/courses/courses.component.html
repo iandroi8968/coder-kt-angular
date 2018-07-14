@@ -1,0 +1,23 @@
+<h1 style="text-align: center;">
+  Results from restful webservices
+</h1>
+<ul>
+  <table border="1" cellpadding='0' cellspacing='0' width=100%>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+          alpha2_code
+        </th>
+        <th>
+            alpha3_code
+          </th>
+    </tr>
+    <tr *ngFor = "let i of result">
+      <td>{{i.name}}</td>
+      <td>{{i.alpha2_code}}</td>
+      <td>{{i.alpha3_code}}</td>
+    </tr>
+  </table>
+</ul>
