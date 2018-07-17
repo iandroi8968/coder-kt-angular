@@ -1,21 +1,21 @@
-import { Result, RestResponse } from './../rest-response.model';
+import { Result, RestResponse } from '../rest-response.model';
 import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from '../courses.service';
+import { CountriesService } from '../countries.service';
 
 @Component({
-  selector: 'app-courses',
-  templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  selector: 'app-countries',
+  templateUrl: './countries.component.html',
+  styleUrls: ['./countries.component.css']
 })
 export class CoursesComponent implements OnInit {
   private result : Result[];
-  constructor(private coursesService : CoursesService) { 
+  constructor(private coursesService : CountriesService) { 
   }
 
   ngOnInit() {
     this.coursesService
-      .getCourses()
+      .getCountries()
       .subscribe((data : RestResponse[]) =>{
         this.result = data['RestResponse']['result'];
       });
