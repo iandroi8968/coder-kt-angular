@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CoursesComponent } from './countries/countries.component';
 import { RestResponse } from './rest-response.model';
+import { Observable } from '../../node_modules/rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class CountriesService implements OnInit {
   }
   ngOnInit() {
   }
- getCountries() {
+ getCountries() : Observable<RestResponse[]> {
   return this.http.get<RestResponse[]>("http://services.groupkt.com/country/get/all");
  }
 }
