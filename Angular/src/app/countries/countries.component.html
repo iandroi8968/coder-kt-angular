@@ -2,13 +2,16 @@
   Results from restful webservices
 </h1>
 <div>
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
   <mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef> Country Name </mat-header-cell>
       <mat-cell *matCellDef="let result"> {{result.name}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="alpha2_code">
-      <mat-header-cell *matHeaderCellDef> alpha2_code	 </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> alpha2_code </mat-header-cell>
       <mat-cell *matCellDef="let result"> {{result.alpha2_code}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="alpha3_code">

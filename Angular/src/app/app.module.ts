@@ -4,7 +4,7 @@ import { NgModule, Component } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import { MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule } from "@angular/material";
+  MatSortModule, MatTableModule, MatFormFieldModule, MatInputModule } from "@angular/material";
 import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import { AppComponent } from './app.component';
@@ -27,7 +27,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatProgressSpinnerModule, 
     MatSortModule,
     MatTableModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     CountriesService

@@ -27,4 +27,8 @@ export class CoursesComponent implements OnInit {
       this.show = false;
     });
   }
+
+  applyFilter(event: string) {
+    this.dataSource.filter = event.trim().toLowerCase();
+  }
 }
