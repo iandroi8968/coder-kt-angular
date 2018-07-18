@@ -11,7 +11,7 @@ import { MatTableDataSource, MatPaginator } from '../../../node_modules/@angular
 export class CoursesComponent implements OnInit {
   private result : Result[];
   private dataSource : MatTableDataSource<Result>;
-  private hide : boolean;
+  private show : boolean;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   displayedColumns = ['name', 'alpha2_code', 'alpha3_code'];
   
@@ -19,12 +19,12 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.hide = true;
+    this.show = true;
     this.countriesService.getCountries().subscribe((data : RestResponse[]) => {
       this.result = data['RestResponse']['result'];
       this.dataSource = new MatTableDataSource<Result>(this.result);
       this.dataSource.paginator = this.paginator;
-      this.hide = false;
+      this.show = false;
     });
   }
 }
