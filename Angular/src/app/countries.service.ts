@@ -15,4 +15,7 @@ export class CountriesService implements OnInit {
  getCountries() : Observable<RestResponse[]> {
   return this.http.get<RestResponse[]>("http://services.groupkt.com/country/get/all");
  }
+ getCountriesByAlphaCode(alphaCode : String) : Observable<RestResponse[]> {
+  return this.http.get<RestResponse[]>("http://services.groupkt.com/country/get/iso3code/" + alphaCode);
+ }
 }

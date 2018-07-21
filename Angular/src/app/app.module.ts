@@ -10,18 +10,21 @@ import { BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './countries/countries.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FlipcardComponent } from './flipcard/flipcard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     NavbarComponent,
+    FlipcardComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path : "countries" , component : CoursesComponent}
+      {path : "countries" , component : CoursesComponent},
+      {path : "flicards" , component : FlipcardComponent}
     ]),
     MatPaginatorModule, 
     MatProgressSpinnerModule, 

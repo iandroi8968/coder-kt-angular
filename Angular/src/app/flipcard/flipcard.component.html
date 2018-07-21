@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="box" (click)="toggleFlip()" [@flipState]="flip">
+    <div class="box_side box_front">
+      {{cardData.name | uppercase}}
+      <br /> {{'CODE 1 : ' + cardData.alpha2_code}}
+      <br /> {{'CODE 2 : ' +cardData.alpha3_code}}
+      <br /> Click on me!! <br/>With every flip you will get a country's details
+    </div>
+    <div class="box_side box_back">
+      {{cardData.name}}
+      <br /> {{cardData.alpha2_code}}
+      <br /> {{cardData.alpha3_code}}
+      <br /> click on me!! <br/>With every flip you will get a country's details
+    </div>
+  </div>
+</div>
