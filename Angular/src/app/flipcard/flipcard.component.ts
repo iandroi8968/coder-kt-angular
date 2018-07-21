@@ -16,8 +16,8 @@ import { Result } from '../rest-response.model';
       state('inactive', style({
         transform: 'rotateY(0)'
       })),
-      transition('active => inactive', animate('500ms ease-out')),
-      transition('inactive => active', animate('500ms ease-in'))
+      transition('active => inactive', animate('100ms')),
+      transition('inactive => active', animate('100ms'))
     ])  
   ]
 })
