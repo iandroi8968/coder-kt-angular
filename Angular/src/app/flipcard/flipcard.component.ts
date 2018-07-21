@@ -30,6 +30,10 @@ export class FlipcardComponent implements OnInit {
   constructor(private countriesService : CountriesService) {}
 
   toggleFlip() {
+    //loops the flip
+    if(this.counter == this.countries.length) {
+      this.counter = 0;
+    }
     this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
     this.cardData = this.countries[this.counter++];
   }
